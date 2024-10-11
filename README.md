@@ -4,36 +4,37 @@
 This project is a Node.js application using Express.js and Sequelize ORM. It provides a RESTful API for CRUD management of inventory, allowing you to create, read, update, and delete inventory items. The application is designed to work with Navicat for database management and Postman for API testing.
 ## Project Structure
 assignment_3/
-├── assets/
-├── config/
+├── assets/                  # Static assets and resources
+├── config/                  # Database configuration
 │   └── config.json
-├── controller/
+├── controller/              # Controllers for handling requests
 │   ├── cart.js
 │   └── file.js
-├── files/
-├── middleware/
+├── files/                   # Directory for file uploads or storage
+├── middleware/              # Custom middleware functions
 │   └── upload.js
-├── migrations/
+├── migrations/              # Sequelize migration files
 │   └── 20241010053117-product.js
-├── models/
+├── models/                  # Sequelize models
 │   ├── index.js
 │   └── product.js
-├── routes/
+├── routes/                  # Route definitions for the API
 │   ├── cart.js
 │   └── file.js
-├── seeders/
+├── seeders/                 # Sequelize seed files
 │   └── 20241010064623-product.js
-├── .env
-├── .gitignore
-├── package.json
-├── package-lock.json
-└── server.js
+├── .env                     # Environment variables
+├── .gitignore               # Git ignore file
+├── package.json             # Node.js dependencies and scripts
+├── package-lock.json        # Lock file for npm dependencies
+└── server.js                # Main server file
+
 
 ## Installation
 
 1. Clone the repository:
     ```sh
-    git clone <repository-url>
+    git clone https://github.com/rantidhanty/Assignment3_RamadhantySadewi
     cd <repository-directory>
     ```
 
@@ -82,5 +83,9 @@ assignment_3/
 - `GET /image` - Get all files
 - `POST /image` - Upload a file
 
-## License
-This project is licensed under the MIT License.
+## Technologies Used
+Node.js
+Express.js
+Sequelize ORM
+MySQL (via Navicat)
+Postman (for API testing)
