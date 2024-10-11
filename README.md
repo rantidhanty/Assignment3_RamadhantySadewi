@@ -3,6 +3,7 @@
 ## Description
 This project is a Node.js application using Express.js and Sequelize ORM. It provides a RESTful API for CRUD management of inventory, allowing you to create, read, update, and delete inventory items. The application is designed to work with Navicat for database management and Postman for API testing.
 ## Project Structure
+```bash
 assignment_3/
 ├── assets/                  # Static assets and resources
 ├── config/                  # Database configuration
@@ -28,7 +29,7 @@ assignment_3/
 ├── package.json             # Node.js dependencies and scripts
 ├── package-lock.json        # Lock file for npm dependencies
 └── server.js                # Main server file
-
+```
 
 ## Installation
 
