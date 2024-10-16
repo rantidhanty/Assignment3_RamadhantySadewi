@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 app.use('/cart', cart);
 app.use('/image', file);
 
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`)
 })

@@ -19,6 +19,55 @@ const getAllProduct = async (req, res) => {
   }
 };
 
+//get by names
+const getProductNames = async (req, res) => {
+  try {
+    const productNames = await Product.findAll({
+      attributes: ["nameProduct"],
+    });
+    res.status(200).json({
+      status: "success",
+      code: 200,
+      data: productNames,
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: "error",
+      code: 500,
+      message: error.message,
+    });
+  }
+};
+
+//get by id
+const getProductNameById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const product = await Product.findOne({
+      attributes: ["nameProduct", "priceProduct"],
+      where: { idProduct: id },
+    });
+    if (product) {
+      res.status(200).json({
+        status: "success",
+        code: 200,
+        data: product,
+      });
+    } else {
+      res.status(404).json({
+        status: "error",
+        code: 404,
+        message: "Product not found",
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      status: "error",
+      code: 500,
+      message: error.message,
+    });
+  }
+};
 //cread
 const createProduct = async (req, res) => {
   try {
@@ -108,9 +157,12 @@ const deleteProduct = async (req, res) => {
     });
   }
 };
+
 module.exports = {
   getAllProduct,
   createProduct,
   updateProduct,
   deleteProduct,
+  getProductNames,
+  getProductNameById,
 };
